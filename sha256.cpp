@@ -5,14 +5,14 @@ using namespace std;
 
 string sha256(const string& str) {
     hash<string> hasher;
-    ostringstream oss;
-    oss << hasher(str);
+    ostringstream word;
+    word << hasher(str);
 
-    return oss.str();
+    return word.str();
 }
 
 int main() {
-    string input = "Anel is the genius";
+    string input = "Little mermaid";
     string hash = sha256(input);
     cout << "Result of SHA-256 hashing method: " << hash << endl;
 
